@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ course.name }}</title>
+</head>
+<body>
+    <h1>{{ course.name }}</h1>
+    <p>Description: {{ course.description }}</p>
+    <p>Teacher: {{ course.teacher.username }}</p>
+    <a href="{% url 'course_edit' course.pk %}">Edit</a>
+    <h2>Students</h2>
+    <a href="{% url 'student_create' course.pk %}">Add student</a>
+    <ul>
+        {% for student in students %}
+            <li>{{ student.name }} ({{ student.email }})</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

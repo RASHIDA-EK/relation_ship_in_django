@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ profile.user.username }}'s Profile</title>
+</head>
+<body>
+    <h1>{{ profile.user.username }}'s Profile</h1>
+    <p>Birthdate: {{ profile.birthdate }}</p>
+    <p>Bio: {{ profile.bio }}</p>
+    <a href="{% url 'schoolprofile:profile_edit' profile.pk %}">Edit</a>
+</body>
+</html>

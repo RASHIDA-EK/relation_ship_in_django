@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enrollment Detail</title>
+</head>
+<body>
+    <h1>Enrollment Detail</h1>
+    <p>Student: {{ enrollment.student.name }}</p>
+    <p>Course: {{ enrollment.course.name }}</p>
+    <p>Date Enrolled: {{ enrollment.date_enrolled }}</p>
+    <a href="{% url 'enrollment_list' %}">Back to Enrollment List</a>
+</body>
+</html>

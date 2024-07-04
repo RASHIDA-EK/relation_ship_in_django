@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Profiles</title>
+</head>
+<body>
+    <h2>Student Profiles</h2>
+    <ul>
+        {% for profile in profiles %}
+            <li><a href="{% url 'schoolprofile:profile_detail' profile.pk %}">{{ profile.user.username }}</a></li>
+        {% endfor %}
+    </ul>
+<a href="{% url 'schoolprofile:register' %}">Register</a>
+<a href="{% url 'schoolprofile:profile_create' %}">profile_create</a>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enrollment List</title>
+</head>
+<body>
+    <h1>Enrollment List</h1>
+    <ul>
+        {% for enrollment in enrollments %}
+            <li>
+                <a href="{% url 'enrollment_detail' enrollment.pk %}">{{ enrollment.student.name }} enrolled in {{ enrollment.course.name }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'enrollment_create' %}">Add New Enrollment</a>
+</body>
+</html>
